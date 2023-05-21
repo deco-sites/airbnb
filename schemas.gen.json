@@ -70,7 +70,12 @@
               "$live/sections/PageInclude.tsx",
               "$live/sections/Slot.tsx",
               "$live/sections/UseSlot.tsx",
+cards
+              "deco-sites/airbnb/sections/Card.tsx",
+              "deco-sites/airbnb/sections/CardGrid.tsx",
+=======
               "deco-sites/airbnb/sections/BottomBar.tsx",
+main
               "deco-sites/airbnb/sections/DesignSystem.tsx",
               "deco-sites/airbnb/sections/GetStarted.tsx",
               "deco-sites/airbnb/sections/Head.tsx",
@@ -2673,7 +2678,11 @@
             "number",
             "null"
           ],
+
+          "title": "Page Offset",
+=======
           "title": "Starting page query parameter offset.",
+
           "description": "Set the starting page offset. Default to 1."
         }
       },
@@ -3052,7 +3061,11 @@
             "number",
             "null"
           ],
+
+          "title": "Page Offset",
+=======
           "title": "Starting page query parameter offset.",
+
           "description": "Set the starting page offset. Default to 1."
         }
       },
@@ -6895,6 +6908,74 @@
       ],
       "title": "deco-cx/live/sections/UseSlot.tsx@Props"
     },
+
+    "ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvQ2FyZC50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "cards": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "card": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "image": {
+                      "type": "string",
+                      "title": "Image"
+                    },
+                    "alt": {
+                      "type": "string",
+                      "title": "Alt"
+                    },
+                    "local": {
+                      "type": "string",
+                      "title": "Local"
+                    },
+                    "score": {
+                      "type": "number",
+                      "title": "Score"
+                    },
+                    "host": {
+                      "type": "string",
+                      "title": "Host"
+                    },
+                    "date": {
+                      "type": "string",
+                      "title": "Date"
+                    },
+                    "price": {
+                      "type": "number",
+                      "title": "Price"
+                    }
+                  },
+                  "required": [
+                    "image",
+                    "alt",
+                    "local",
+                    "score",
+                    "host",
+                    "date",
+                    "price"
+                  ]
+                },
+                "title": "Card"
+              }
+            },
+            "required": [
+              "card"
+            ]
+          },
+          "title": "Cards"
+        }
+      },
+      "required": [
+        "cards"
+      ],
+      "title": "deco-sites/airbnb/sections/Card.tsx@Props"
+=======
     "ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvQm90dG9tQmFyLnRzeA==@Props": {
       "type": "object",
       "properties": {
@@ -6917,6 +6998,7 @@
         "profile"
       ],
       "title": "deco-sites/airbnb/sections/BottomBar.tsx@Props"
+
     },
     "ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@Colors": {
       "type": "object",
@@ -9471,12 +9553,21 @@
         }
       }
     },
+
+    "ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvQ2FyZC50c3g=": {
+      "title": "deco-sites/airbnb/sections/Card.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvQ2FyZC50c3g=@Props"
+=======
     "ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvQm90dG9tQmFyLnRzeA==": {
       "title": "deco-sites/airbnb/sections/BottomBar.tsx",
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvQm90dG9tQmFyLnRzeA==@Props"
+
         }
       ],
       "required": [
@@ -9486,9 +9577,31 @@
         "__resolveType": {
           "type": "string",
           "enum": [
+
+            "deco-sites/airbnb/sections/Card.tsx"
+          ],
+          "default": "deco-sites/airbnb/sections/Card.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvQ2FyZEdyaWQudHN4": {
+      "title": "deco-sites/airbnb/sections/CardGrid.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/airbnb/sections/CardGrid.tsx"
+          ],
+          "default": "deco-sites/airbnb/sections/CardGrid.tsx"
+=======
             "deco-sites/airbnb/sections/BottomBar.tsx"
           ],
           "default": "deco-sites/airbnb/sections/BottomBar.tsx"
+
         }
       }
     },
@@ -10662,7 +10775,14 @@
           "$ref": "#/definitions/JGxpdmUvc2VjdGlvbnMvVXNlU2xvdC50c3g="
         },
         {
+
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvQ2FyZC50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvQ2FyZEdyaWQudHN4"
+=======
           "$ref": "#/definitions/ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvQm90dG9tQmFyLnRzeA=="
+
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA=="

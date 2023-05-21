@@ -17,8 +17,7 @@ export default function GetStarted({ enableInspectVSCode }: Props) {
                 src="https://start.deco.site/android-chrome-512x512.png"
                 alt=""
                 width={512}
-                height={512}
-              />
+                height={512} />
             </div>
           </div>
           <div class="w-full md:w-1/2 p-6">
@@ -32,18 +31,18 @@ export default function GetStarted({ enableInspectVSCode }: Props) {
               <p class="mb-4 text-lg">
                 Try any URL in the address bar 👆
               </p>
-              {enableInspectVSCode && !context.deploymentId && (
-                <p class="mb-8 text-lg border border-dashed border-primary-dark p-4">
+              {enableInspectVSCode&&!context.deploymentId&&(
+                  <p class="mb-8 text-lg border border-dashed border-primary-dark p-4">
                   <span class="italic">PROTIP:</span>{" "}
                   Hit backtick (`) and click on any part of this page to
                   navigate to the code in VSCode automatically. Hit ESC to exit
                   inspect mode.
-                </p>
+                  </p>
               )}
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </section> 
   );
 }
