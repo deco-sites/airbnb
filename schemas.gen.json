@@ -70,6 +70,8 @@
               "$live/sections/PageInclude.tsx",
               "$live/sections/Slot.tsx",
               "$live/sections/UseSlot.tsx",
+              "deco-sites/airbnb/sections/Card.tsx",
+              "deco-sites/airbnb/sections/CardGrid.tsx",
               "deco-sites/airbnb/sections/DesignSystem.tsx",
               "deco-sites/airbnb/sections/GetStarted.tsx",
               "deco-sites/airbnb/sections/Head.tsx",
@@ -109,6 +111,8 @@
               "deco-sites/std/actions/vtex/cart/updateItems.ts",
               "deco-sites/std/actions/vtex/cart/updateProfile.ts",
               "deco-sites/std/actions/vtex/cart/updateUser.ts",
+              "deco-sites/std/actions/vtex/newsletter/subscribe.ts",
+              "deco-sites/std/actions/vtex/notifyme.ts",
               "deco-sites/std/actions/vtex/wishlist/addItem.ts",
               "deco-sites/std/actions/vtex/wishlist/removeItem.ts"
             ]
@@ -1654,8 +1658,8 @@
           }
         },
         {
-          "title": "VTEX product details page - Intelligent Search (deprecated)",
-          "description": "Works on routes of type /:slug/p",
+          "title": "VTEX Intelligent Search - Product Details page",
+          "description": "For routes of type /:slug/p",
           "deprecated": true,
           "type": "object",
           "required": [
@@ -1694,8 +1698,8 @@
           }
         },
         {
-          "title": "VTEX product details page - Portal",
-          "description": "Works on routes of type /:slug/p",
+          "title": "VTEX Legacy - Product Details page",
+          "description": "For routes of type /:slug/p",
           "type": "object",
           "allOf": [
             {
@@ -1784,7 +1788,7 @@
           "type": "null"
         },
         {
-          "title": "Product list loader",
+          "title": "Shopify - Search Products",
           "description": "Usefull for shelves and static galleries.",
           "type": "object",
           "allOf": [
@@ -1806,8 +1810,8 @@
           }
         },
         {
-          "title": "Product list loader",
-          "description": "Usefull for shelves and static galleries.",
+          "title": "VNDA - Search Products",
+          "description": "Use it in Shelves and static Galleries.",
           "type": "object",
           "allOf": [
             {
@@ -1828,7 +1832,7 @@
           }
         },
         {
-          "title": "VTEX product list - legacy (deprecated)",
+          "title": "VTEX - Search Products - legacy (deprecated)",
           "description": "Usefull for shelves and static galleries.",
           "deprecated": true,
           "type": "object",
@@ -1851,7 +1855,7 @@
           }
         },
         {
-          "title": "VTEX related products - legacy (deprecated)",
+          "title": "VTEX Legacy - Related Products (deprecated)",
           "description": "Works on routes of type /:slug/p",
           "deprecated": true,
           "type": "object",
@@ -1874,8 +1878,8 @@
           }
         },
         {
-          "title": "VTEX product list - Intelligent Search (deprecated)",
-          "description": "Usefull for shelves and static galleries.",
+          "title": "VTEX Intelligent Search - Search Products",
+          "description": "Use it in Shelves and static Galleries.",
           "deprecated": true,
           "type": "object",
           "allOf": [
@@ -1919,8 +1923,8 @@
           }
         },
         {
-          "title": "VTEX product list - Portal",
-          "description": "Usefull for shelves and static galleries.",
+          "title": "VTEX Legacy - Search Products",
+          "description": "Use it in Shelves and static Galleries.",
           "type": "object",
           "allOf": [
             {
@@ -2262,7 +2266,7 @@
           "type": "null"
         },
         {
-          "title": "Product listing page loader",
+          "title": "Shopify - Product Listing page",
           "description": "Returns data ready for search pages like category,brand pages",
           "type": "object",
           "allOf": [
@@ -2284,8 +2288,8 @@
           }
         },
         {
-          "title": "Product listing page loader",
-          "description": "Returns data ready for search pages like category,brand pages",
+          "title": "VNDA - Product Listing page",
+          "description": "Useful for category, search, brand and collection pages.",
           "type": "object",
           "allOf": [
             {
@@ -2306,8 +2310,8 @@
           }
         },
         {
-          "title": "VTEX product listing page - legacy (deprecated)",
-          "description": "Returns data ready for search pages like category,brand pages",
+          "title": "VTEX Legacy - Product Listing page",
+          "description": "Useful for category, search, brand and collection pages.",
           "deprecated": true,
           "type": "object",
           "allOf": [
@@ -2329,8 +2333,8 @@
           }
         },
         {
-          "title": "VTEX product listing page - Intelligent Search (deprecated)",
-          "description": "Returns data ready for search pages like category,brand pages",
+          "title": "VTEX Intelligent Search - Product Listing page",
+          "description": "Useful for category, search, brand and collection pages.",
           "deprecated": true,
           "type": "object",
           "allOf": [
@@ -2352,8 +2356,8 @@
           }
         },
         {
-          "title": "Product list loader",
-          "description": "Usefull for shelves and static galleries.",
+          "title": "VTEX - Load Wishlist",
+          "description": "Used with vtex.wish-list app",
           "deprecated": true,
           "type": "object",
           "allOf": [
@@ -2375,7 +2379,7 @@
           }
         },
         {
-          "title": "VTEX product listing page - Intelligent Search",
+          "title": "VTEX Intelligent Search - Product Listing page",
           "description": "Returns data ready for search pages like category,brand pages",
           "type": "object",
           "allOf": [
@@ -2670,8 +2674,7 @@
             "null"
           ],
           "title": "Page Offset",
-          "description": "Set the starting page offset. Default to 1.",
-          "default": "1"
+          "description": "Set the starting page offset. Default to 1."
         }
       },
       "required": [
@@ -3050,8 +3053,7 @@
             "null"
           ],
           "title": "Page Offset",
-          "description": "Set the starting page offset. Default to 1.",
-          "default": "1"
+          "description": "Set the starting page offset. Default to 1."
         }
       },
       "required": [
@@ -6893,6 +6895,73 @@
       ],
       "title": "deco-cx/live/sections/UseSlot.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvQ2FyZC50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "cards": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "card": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "image": {
+                      "type": "string",
+                      "title": "Image"
+                    },
+                    "alt": {
+                      "type": "string",
+                      "title": "Alt"
+                    },
+                    "local": {
+                      "type": "string",
+                      "title": "Local"
+                    },
+                    "score": {
+                      "type": "number",
+                      "title": "Score"
+                    },
+                    "host": {
+                      "type": "string",
+                      "title": "Host"
+                    },
+                    "date": {
+                      "type": "string",
+                      "title": "Date"
+                    },
+                    "price": {
+                      "type": "number",
+                      "title": "Price"
+                    }
+                  },
+                  "required": [
+                    "image",
+                    "alt",
+                    "local",
+                    "score",
+                    "host",
+                    "date",
+                    "price"
+                  ]
+                },
+                "title": "Card"
+              }
+            },
+            "required": [
+              "card"
+            ]
+          },
+          "title": "Cards"
+        }
+      },
+      "required": [
+        "cards"
+      ],
+      "title": "deco-sites/airbnb/sections/Card.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@Colors": {
       "type": "object",
       "properties": {
@@ -8147,6 +8216,72 @@
       ],
       "title": "deco-sites/std/packs/vtex/actions/cart/updateProfile.ts@Props"
     },
+    "ZGVjby1zaXRlcy9zdGQvcGFja3MvdnRleC9hY3Rpb25zL25ld2xldHRlci9zdWJzY3JpYmUudHM=@Props": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "title": "Email"
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Name"
+        },
+        "page": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Page"
+        },
+        "part": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Part"
+        },
+        "campaing": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Campaing"
+        }
+      },
+      "required": [
+        "email"
+      ],
+      "title": "deco-sites/std/packs/vtex/actions/newletter/subscribe.ts@Props"
+    },
+    "ZGVjby1zaXRlcy9zdGQvcGFja3MvdnRleC9hY3Rpb25zL25vdGlmeW1lLnRz@Props": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "title": "Email"
+        },
+        "skuId": {
+          "type": "string",
+          "title": "Sku Id"
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Name"
+        }
+      },
+      "required": [
+        "email",
+        "skuId"
+      ],
+      "title": "deco-sites/std/packs/vtex/actions/notifyme.ts@Props"
+    },
     "ZGVjby1zaXRlcy9zdGQvcGFja3MvdnRleC9hY3Rpb25zL3dpc2hsaXN0L2FkZEl0ZW0udHM=@Props": {
       "type": "object",
       "properties": {
@@ -8420,7 +8555,7 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Nob3BpZnlQcm9kdWN0TGlzdC50cw==": {
-      "title": "Product list loader",
+      "title": "Shopify - Search Products",
       "description": "Usefull for shelves and static galleries.",
       "type": "object",
       "allOf": [
@@ -8442,7 +8577,7 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Nob3BpZnlQcm9kdWN0TGlzdGluZ1BhZ2UudHM=": {
-      "title": "Product listing page loader",
+      "title": "Shopify - Product Listing page",
       "description": "Returns data ready for search pages like category,brand pages",
       "type": "object",
       "allOf": [
@@ -8481,8 +8616,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3ZuZGFQcm9kdWN0TGlzdC50cw==": {
-      "title": "Product list loader",
-      "description": "Usefull for shelves and static galleries.",
+      "title": "VNDA - Search Products",
+      "description": "Use it in Shelves and static Galleries.",
       "type": "object",
       "allOf": [
         {
@@ -8503,8 +8638,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3ZuZGFQcm9kdWN0TGlzdGluZ1BhZ2UudHM=": {
-      "title": "Product listing page loader",
-      "description": "Returns data ready for search pages like category,brand pages",
+      "title": "VNDA - Product Listing page",
+      "description": "Useful for category, search, brand and collection pages.",
       "type": "object",
       "allOf": [
         {
@@ -8543,7 +8678,7 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Z0ZXhMZWdhY3lQcm9kdWN0TGlzdC50cw==": {
-      "title": "VTEX product list - legacy (deprecated)",
+      "title": "VTEX - Search Products - legacy (deprecated)",
       "description": "Usefull for shelves and static galleries.",
       "deprecated": true,
       "type": "object",
@@ -8566,8 +8701,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Z0ZXhMZWdhY3lQcm9kdWN0TGlzdGluZ1BhZ2UudHM=": {
-      "title": "VTEX product listing page - legacy (deprecated)",
-      "description": "Returns data ready for search pages like category,brand pages",
+      "title": "VTEX Legacy - Product Listing page",
+      "description": "Useful for category, search, brand and collection pages.",
       "deprecated": true,
       "type": "object",
       "allOf": [
@@ -8589,7 +8724,7 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Z0ZXhMZWdhY3lSZWxhdGVkUHJvZHVjdHNMb2FkZXIudHM=": {
-      "title": "VTEX related products - legacy (deprecated)",
+      "title": "VTEX Legacy - Related Products (deprecated)",
       "description": "Works on routes of type /:slug/p",
       "deprecated": true,
       "type": "object",
@@ -8634,8 +8769,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Z0ZXhQcm9kdWN0RGV0YWlsc1BhZ2UudHM=": {
-      "title": "VTEX product details page - Intelligent Search (deprecated)",
-      "description": "Works on routes of type /:slug/p",
+      "title": "VTEX Intelligent Search - Product Details page",
+      "description": "For routes of type /:slug/p",
       "deprecated": true,
       "type": "object",
       "required": [
@@ -8652,8 +8787,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Z0ZXhQcm9kdWN0TGlzdC50cw==": {
-      "title": "VTEX product list - Intelligent Search (deprecated)",
-      "description": "Usefull for shelves and static galleries.",
+      "title": "VTEX Intelligent Search - Search Products",
+      "description": "Use it in Shelves and static Galleries.",
       "deprecated": true,
       "type": "object",
       "allOf": [
@@ -8675,8 +8810,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Z0ZXhQcm9kdWN0TGlzdGluZ1BhZ2UudHM=": {
-      "title": "VTEX product listing page - Intelligent Search (deprecated)",
-      "description": "Returns data ready for search pages like category,brand pages",
+      "title": "VTEX Intelligent Search - Product Listing page",
+      "description": "Useful for category, search, brand and collection pages.",
       "deprecated": true,
       "type": "object",
       "allOf": [
@@ -8720,8 +8855,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Z0ZXhXaXNobGlzdC50cw==": {
-      "title": "Product list loader",
-      "description": "Usefull for shelves and static galleries.",
+      "title": "VTEX - Load Wishlist",
+      "description": "Used with vtex.wish-list app",
       "deprecated": true,
       "type": "object",
       "allOf": [
@@ -8953,7 +9088,7 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvbG9hZGVycy92dGV4L2ludGVsbGlnZW50U2VhcmNoL3Byb2R1Y3RMaXN0aW5nUGFnZS50cw==": {
-      "title": "VTEX product listing page - Intelligent Search",
+      "title": "VTEX Intelligent Search - Product Listing page",
       "description": "Returns data ready for search pages like category,brand pages",
       "type": "object",
       "allOf": [
@@ -8996,8 +9131,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvbG9hZGVycy92dGV4L2xlZ2FjeS9wcm9kdWN0RGV0YWlsc1BhZ2UudHM=": {
-      "title": "VTEX product details page - Portal",
-      "description": "Works on routes of type /:slug/p",
+      "title": "VTEX Legacy - Product Details page",
+      "description": "For routes of type /:slug/p",
       "type": "object",
       "allOf": [
         {
@@ -9018,8 +9153,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvbG9hZGVycy92dGV4L2xlZ2FjeS9wcm9kdWN0TGlzdC50cw==": {
-      "title": "VTEX product list - Portal",
-      "description": "Usefull for shelves and static galleries.",
+      "title": "VTEX Legacy - Search Products",
+      "description": "Use it in Shelves and static Galleries.",
       "type": "object",
       "allOf": [
         {
@@ -9373,6 +9508,43 @@
             "$live/sections/UseSlot.tsx"
           ],
           "default": "$live/sections/UseSlot.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvQ2FyZC50c3g=": {
+      "title": "deco-sites/airbnb/sections/Card.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvQ2FyZC50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/airbnb/sections/Card.tsx"
+          ],
+          "default": "deco-sites/airbnb/sections/Card.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvQ2FyZEdyaWQudHN4": {
+      "title": "deco-sites/airbnb/sections/CardGrid.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/airbnb/sections/CardGrid.tsx"
+          ],
+          "default": "deco-sites/airbnb/sections/CardGrid.tsx"
         }
       }
     },
@@ -10195,6 +10367,50 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9zdGQvYWN0aW9ucy92dGV4L25ld3NsZXR0ZXIvc3Vic2NyaWJlLnRz": {
+      "title": "deco-sites/std/actions/vtex/newsletter/subscribe.ts",
+      "docs": "https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/items",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvcGFja3MvdnRleC9hY3Rpb25zL25ld2xldHRlci9zdWJzY3JpYmUudHM=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/std/actions/vtex/newsletter/subscribe.ts"
+          ],
+          "default": "deco-sites/std/actions/vtex/newsletter/subscribe.ts"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9zdGQvYWN0aW9ucy92dGV4L25vdGlmeW1lLnRz": {
+      "title": "deco-sites/std/actions/vtex/notifyme.ts",
+      "docs": "https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/items",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvcGFja3MvdnRleC9hY3Rpb25zL25vdGlmeW1lLnRz@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/std/actions/vtex/notifyme.ts"
+          ],
+          "default": "deco-sites/std/actions/vtex/notifyme.ts"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9zdGQvYWN0aW9ucy92dGV4L3dpc2hsaXN0L2FkZEl0ZW0udHM=": {
       "title": "deco-sites/std/actions/vtex/wishlist/addItem.ts",
       "type": "object",
@@ -10493,6 +10709,12 @@
           "$ref": "#/definitions/JGxpdmUvc2VjdGlvbnMvVXNlU2xvdC50c3g="
         },
         {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvQ2FyZC50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvQ2FyZEdyaWQudHN4"
+        },
+        {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA=="
         },
         {
@@ -10632,6 +10854,12 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvYWN0aW9ucy92dGV4L2NhcnQvdXBkYXRlVXNlci50cw=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvYWN0aW9ucy92dGV4L25ld3NsZXR0ZXIvc3Vic2NyaWJlLnRz"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvYWN0aW9ucy92dGV4L25vdGlmeW1lLnRz"
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvYWN0aW9ucy92dGV4L3dpc2hsaXN0L2FkZEl0ZW0udHM="
