@@ -9,7 +9,7 @@ export default function BottomBar(
 ) {
   return (
     <>
-      <div className="flex text-montserrat flex justify-center gap-8 text-slate-200 absolute bottom-0 w-full shadow-lg pb-2 md:hidden">
+      <div className="flex text-montserrat flex justify-center gap-8 text-slate-200 fixed bottom-0 w-full shadow-lg pb-2 md:hidden bg-[#FFFFFF]">
         <div className="flex flex-col items-center justify-center gap-1 cursor-pointer">
           <svg
             viewBox="0 0 32 32"
@@ -55,7 +55,7 @@ export default function BottomBar(
           <p className="text-sm text-inherit">{profile}</p>
         </div>
       </div>
-      <div className="hidden md:flex justify-between items-center border-t-[1px] border-t-[#808080] text-xs bottom-0 p-2 absolute w-full">
+      <div className="hidden md:flex justify-between items-center border-t-[1px] border-t-[#808080] text-xs bottom-0 p-2 fixed w-full bg-[#FFFFFF]">
         <p>
           © 2023 Airbnb, Inc. · Privacidade · Termos · Mapa do site ·
           Informações da empresa · Destinos

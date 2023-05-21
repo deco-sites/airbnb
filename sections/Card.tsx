@@ -20,12 +20,11 @@ export default function Card(
   }: Props,
 ) {
   return (
-    <>
-      <div class="justify-center flex flex-row flex-wrap gap-2">
+      <div class="justify-center flex flex-row flex-wrap gap-2 py-36 w-full">
         {cards.map(({
           card,
         }) => (
-          <div class="card w-96 bg-base-100 shadow-xl">
+          <div class="card w-60 bg-base-100 shadow-xl">
             {card.map(({
               image,
               alt,
@@ -63,6 +62,5 @@ export default function Card(
           </div>
         ))}
       </div>
-    </>
   );
 }

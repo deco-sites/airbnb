@@ -9,7 +9,7 @@ export default function NavBar(
   { searchBar1, searchBar2, searchBar3, navbarCallToAction }: Props,
 ) {
   return (
-    <div className="flex text-montserrat flex-col md:justify-between items-center justify-center shadow-md shadow-slate-100 absolute top-0 w-full px-4 pt-3 pb-1">
+    <div className="flex text-montserrat flex-col md:justify-between items-center justify-center shadow-md shadow-slate-100 fixed top-0 w-full px-4 pt-3 pb-1 bg-[#FFFFFF] z-10">
       <div className="items-center justify-between w-full hidden md:flex md:gap-5 ">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/1280px-Airbnb_Logo_B%C3%A9lo.svg.png"

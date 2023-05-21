@@ -71,6 +71,7 @@
               "$live/sections/Slot.tsx",
               "$live/sections/UseSlot.tsx",
               "deco-sites/airbnb/sections/BottomBar.tsx",
+              "deco-sites/airbnb/sections/Card.tsx",
               "deco-sites/airbnb/sections/DesignSystem.tsx",
               "deco-sites/airbnb/sections/GetStarted.tsx",
               "deco-sites/airbnb/sections/Head.tsx",
@@ -6918,6 +6919,73 @@
       ],
       "title": "deco-sites/airbnb/sections/BottomBar.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvQ2FyZC50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "cards": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "card": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "image": {
+                      "type": "string",
+                      "title": "Image"
+                    },
+                    "alt": {
+                      "type": "string",
+                      "title": "Alt"
+                    },
+                    "local": {
+                      "type": "string",
+                      "title": "Local"
+                    },
+                    "score": {
+                      "type": "number",
+                      "title": "Score"
+                    },
+                    "host": {
+                      "type": "string",
+                      "title": "Host"
+                    },
+                    "date": {
+                      "type": "string",
+                      "title": "Date"
+                    },
+                    "price": {
+                      "type": "number",
+                      "title": "Price"
+                    }
+                  },
+                  "required": [
+                    "image",
+                    "alt",
+                    "local",
+                    "score",
+                    "host",
+                    "date",
+                    "price"
+                  ]
+                },
+                "title": "Card"
+              }
+            },
+            "required": [
+              "card"
+            ]
+          },
+          "title": "Cards"
+        }
+      },
+      "required": [
+        "cards"
+      ],
+      "title": "deco-sites/airbnb/sections/Card.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@Colors": {
       "type": "object",
       "properties": {
@@ -7291,6 +7359,34 @@
         "themeColor"
       ],
       "title": "deco-sites/airbnb/sections/Head.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvTmF2QmFyLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "searchBar1": {
+          "type": "string",
+          "title": "Search Bar1"
+        },
+        "searchBar2": {
+          "type": "string",
+          "title": "Search Bar2"
+        },
+        "searchBar3": {
+          "type": "string",
+          "title": "Search Bar3"
+        },
+        "navbarCallToAction": {
+          "type": "string",
+          "title": "Navbar Call To Action"
+        }
+      },
+      "required": [
+        "searchBar1",
+        "searchBar2",
+        "searchBar3",
+        "navbarCallToAction"
+      ],
+      "title": "deco-sites/airbnb/sections/NavBar.tsx@Props"
     },
     "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy9BbmFseXRpY3MudHN4@Props": {
       "type": "object",
@@ -9492,6 +9588,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvQ2FyZC50c3g=": {
+      "title": "deco-sites/airbnb/sections/Card.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvQ2FyZC50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/airbnb/sections/Card.tsx"
+          ],
+          "default": "deco-sites/airbnb/sections/Card.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==": {
       "title": "deco-sites/airbnb/sections/DesignSystem.tsx",
       "type": "object",
@@ -9558,6 +9675,11 @@
     "ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvTmF2QmFyLnRzeA==": {
       "title": "deco-sites/airbnb/sections/NavBar.tsx",
       "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvTmF2QmFyLnRzeA==@Props"
+        }
+      ],
       "required": [
         "__resolveType"
       ],
@@ -10663,6 +10785,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvQm90dG9tQmFyLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvQ2FyZC50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA=="
