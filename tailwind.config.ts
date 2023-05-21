@@ -32,8 +32,6 @@ export default {
       secondary: theme.secondary,
       accent: theme.accent,
       neutral: theme.neutral,
-
-    }
-  }
+    },
+  },
 };
-

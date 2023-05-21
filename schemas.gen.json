@@ -6895,6 +6895,29 @@
       ],
       "title": "deco-cx/live/sections/UseSlot.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvQm90dG9tQmFyLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "explore": {
+          "type": "string",
+          "title": "Explore"
+        },
+        "favorites": {
+          "type": "string",
+          "title": "Favorites"
+        },
+        "profile": {
+          "type": "string",
+          "title": "Profile"
+        }
+      },
+      "required": [
+        "explore",
+        "favorites",
+        "profile"
+      ],
+      "title": "deco-sites/airbnb/sections/BottomBar.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@Colors": {
       "type": "object",
       "properties": {
@@ -9451,6 +9474,11 @@
     "ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvQm90dG9tQmFyLnRzeA==": {
       "title": "deco-sites/airbnb/sections/BottomBar.tsx",
       "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvQm90dG9tQmFyLnRzeA==@Props"
+        }
+      ],
       "required": [
         "__resolveType"
       ],
