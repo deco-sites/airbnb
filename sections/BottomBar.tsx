@@ -1,10 +1,12 @@
 export interface Props {
-    explore: string;
-    favorites: string;
-    profile: string;
+  explore: string;
+  favorites: string;
+  profile: string;
 }
 
-export default function BottomBar({ explore = "Explorar", favorites = "Favoritos", profile = "Entrar" }: Props) {
+export default function BottomBar(
+  { explore = "Explorar", favorites = "Favoritos", profile = "Entrar" }: Props,
+) {
   return (
     <div className="flex text-montserrat flex justify-center gap-8 text-slate-200 absolute bottom-0 w-full shadow-lg pb-2 md:hidden">
       <div className="flex flex-col items-center justify-center gap-1 cursor-pointer">
