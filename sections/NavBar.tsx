@@ -1,4 +1,13 @@
-export default function NavBar() {
+export interface Props {
+  searchBar1: string;
+  searchBar2: string;
+  searchBar3: string;
+  navbarCallToAction: string;
+}
+
+export default function NavBar(
+  { searchBar1, searchBar2, searchBar3, navbarCallToAction }: Props,
+) {
   return (
     <div className="flex text-montserrat flex-col md:justify-between items-center justify-center shadow-md shadow-slate-100 absolute top-0 w-full px-4 pt-3 pb-1">
       <div className="items-center justify-between w-full hidden md:flex md:gap-5 ">
@@ -8,12 +17,12 @@ export default function NavBar() {
         />
         <div className="hidden md:flex text-xs rounded-full items-center justify-between shadow-md px-3 py-3 border-gray-300 border-[1px]">
           <p className="font-bold border-r-slate-300 border-r-[1px] px-3">
-            Qualquer lugar
+            {searchBar1}
           </p>
           <p className="font-bold border-r-slate-300 border-r-[1px] px-3">
-            Qualquer semana
+            {searchBar2}
           </p>
-          <p className="px-3">Hóspedes?</p>
+          <p className="px-3">{searchBar3}</p>
           <svg
             className="rounded-full bg-[#ff385c]"
             viewBox="0 0 32 32"
@@ -30,7 +39,7 @@ export default function NavBar() {
           </svg>
         </div>
         <div className="gap-5 items-center justify-center hidden md:flex">
-          <p className="text-xs font-bold">Anuncie seu espaço no AirBnb</p>
+          <p className="text-xs font-bold">{navbarCallToAction}</p>
           <svg
             viewBox="0 0 16 16"
             xmlns="http://www.w3.org/2000/svg"
@@ -83,9 +92,9 @@ export default function NavBar() {
             </path>
           </svg>
           <div className="flex flex-col items-start text-xs">
-            <p className="text-montserrat font-bold">Qualquer lugar</p>
+            <p className="text-montserrat font-bold">{searchBar1}</p>
             <p className="font-light text-neutral">
-              Qualquer semana • Hóspedes?
+              {searchBar2} • {searchBar3}
             </p>
           </div>
         </div>
