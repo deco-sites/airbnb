@@ -70,11 +70,16 @@
               "$live/sections/PageInclude.tsx",
               "$live/sections/Slot.tsx",
               "$live/sections/UseSlot.tsx",
+cards
               "deco-sites/airbnb/sections/Card.tsx",
               "deco-sites/airbnb/sections/CardGrid.tsx",
+=======
+              "deco-sites/airbnb/sections/BottomBar.tsx",
+main
               "deco-sites/airbnb/sections/DesignSystem.tsx",
               "deco-sites/airbnb/sections/GetStarted.tsx",
               "deco-sites/airbnb/sections/Head.tsx",
+              "deco-sites/airbnb/sections/NavBar.tsx",
               "deco-sites/std/sections/Analytics.tsx",
               "deco-sites/std/sections/configButterCMS.global.tsx",
               "deco-sites/std/sections/configOCC.global.tsx",
@@ -2437,7 +2442,7 @@
         },
         "count": {
           "type": "number",
-          "title": "Count",
+          "title": "Items per page",
           "description": "number of products per page to display"
         }
       },
@@ -2528,7 +2533,7 @@
         },
         "count": {
           "type": "number",
-          "title": "Count",
+          "title": "Items per page",
           "description": "number of products per page to display"
         }
       },
@@ -2581,7 +2586,7 @@
         },
         "count": {
           "type": "number",
-          "title": "Count",
+          "title": "Items per page",
           "description": "number of products per page to display"
         },
         "ft": {
@@ -2651,7 +2656,7 @@
             }
           ],
           "type": "string",
-          "title": "Sort"
+          "title": "Sorting"
         },
         "filters": {
           "anyOf": [
@@ -2665,7 +2670,7 @@
             }
           ],
           "type": "string",
-          "title": "Filters",
+          "title": "Filter behavior",
           "description": "Set to static to not change the facets when the user filters the search. Dynamic will only show the filters containing products after each filter action"
         },
         "pageOffset": {
@@ -2673,7 +2678,11 @@
             "number",
             "null"
           ],
+
           "title": "Page Offset",
+=======
+          "title": "Starting page query parameter offset.",
+
           "description": "Set the starting page offset. Default to 1."
         }
       },
@@ -2717,7 +2726,7 @@
             }
           ],
           "type": "string",
-          "title": "Cross Selling",
+          "title": "Related Products",
           "description": "VTEX Cross Selling API. This loader only works on routes of type /:slug/p"
         },
         "count": {
@@ -2927,7 +2936,7 @@
           "items": {
             "type": "string"
           },
-          "title": "Collection",
+          "title": "Collection ID",
           "pattern": "\\d*"
         }
       },
@@ -2975,7 +2984,7 @@
         },
         "count": {
           "type": "number",
-          "title": "Count",
+          "title": "Items per page",
           "description": "number of products per page to display"
         },
         "sort": {
@@ -3014,7 +3023,7 @@
             }
           ],
           "type": "string",
-          "title": "Sort"
+          "title": "Sorting"
         },
         "fuzzy": {
           "anyOf": [
@@ -3052,7 +3061,11 @@
             "number",
             "null"
           ],
+
           "title": "Page Offset",
+=======
+          "title": "Starting page query parameter offset.",
+
           "description": "Set the starting page offset. Default to 1."
         }
       },
@@ -3180,7 +3193,7 @@
       "properties": {
         "count": {
           "type": "number",
-          "title": "Count",
+          "title": "Items per page",
           "description": "Number of products per page to display",
           "default": "12"
         }
@@ -6039,7 +6052,7 @@
       "properties": {
         "collection": {
           "type": "string",
-          "title": "Collection",
+          "title": "Collection ID (e.g.: 139)",
           "pattern": "\\d*"
         },
         "sort": {
@@ -6423,7 +6436,7 @@
             }
           ],
           "type": "string",
-          "title": "Cross Selling",
+          "title": "Related Products",
           "description": "VTEX Cross Selling API. This loader only works on routes of type /:slug/p"
         },
         "count": {
@@ -6578,7 +6591,7 @@
       "properties": {
         "count": {
           "type": "number",
-          "title": "Count",
+          "title": "Items per page",
           "description": "Number of products per page to display",
           "default": "12"
         }
@@ -6895,6 +6908,7 @@
       ],
       "title": "deco-cx/live/sections/UseSlot.tsx@Props"
     },
+
     "ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvQ2FyZC50c3g=@Props": {
       "type": "object",
       "properties": {
@@ -6961,6 +6975,30 @@
         "cards"
       ],
       "title": "deco-sites/airbnb/sections/Card.tsx@Props"
+=======
+    "ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvQm90dG9tQmFyLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "explore": {
+          "type": "string",
+          "title": "Explore"
+        },
+        "favorites": {
+          "type": "string",
+          "title": "Favorites"
+        },
+        "profile": {
+          "type": "string",
+          "title": "Profile"
+        }
+      },
+      "required": [
+        "explore",
+        "favorites",
+        "profile"
+      ],
+      "title": "deco-sites/airbnb/sections/BottomBar.tsx@Props"
+
     },
     "ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@Colors": {
       "type": "object",
@@ -7174,61 +7212,61 @@
         "--rounded-box": {
           "type": "string",
           "default": "1rem",
-          "title": "--rounded-box",
+          "title": "Rounded box",
           "description": "border radius rounded-box utility class, used in card and other large boxes"
         },
         "--rounded-btn": {
           "type": "string",
           "default": "0.5rem",
-          "title": "--rounded-btn",
+          "title": "Rounded button",
           "description": "border radius rounded-btn utility class, used in buttons and similar element"
         },
         "--rounded-badge": {
           "type": "string",
           "default": "1.9rem",
-          "title": "--rounded-badge",
+          "title": "Rounded badge",
           "description": "border radius rounded-badge utility class, used in badges and similar"
         },
         "--animation-btn": {
           "type": "string",
           "default": "0.25s",
-          "title": "--animation-btn",
+          "title": "Animation button",
           "description": "duration of animation when you click on button"
         },
         "--animation-input": {
           "type": "string",
           "default": "0.2s",
-          "title": "--animation-input",
+          "title": "Animation input",
           "description": "duration of animation for inputs like checkbox, toggle, radio, etc"
         },
         "--btn-text-case": {
           "type": "string",
           "default": "uppercase",
-          "title": "--btn-text-case",
+          "title": "Button text case",
           "description": "set default text transform for buttons"
         },
         "--btn-focus-scale": {
           "type": "string",
           "default": "0.95",
-          "title": "--btn-focus-scale",
+          "title": "Button focus scale",
           "description": "scale transform of button when you focus on it"
         },
         "--border-btn": {
           "type": "string",
           "default": "1px",
-          "title": "--border-btn",
+          "title": "Border button",
           "description": "border width of buttons"
         },
         "--tab-border": {
           "type": "string",
           "default": "1px",
-          "title": "--tab-border",
+          "title": "Tab border",
           "description": "border width of tabs"
         },
         "--tab-radius": {
           "type": "string",
           "default": "0.5rem",
-          "title": "--tab-radius",
+          "title": "Tab radius",
           "description": "border radius of tabs"
         }
       },
@@ -7356,7 +7394,7 @@
       "properties": {
         "label": {
           "type": "string",
-          "title": "Label"
+          "title": "Locale"
         },
         "authToken": {
           "type": "string",
@@ -7432,7 +7470,7 @@
             "string",
             "null"
           ],
-          "title": "Canonical",
+          "title": "Canonical URL",
           "default": "https://example.com"
         },
         "imageUrl": {
@@ -7462,7 +7500,7 @@
         },
         "titleTemplate": {
           "type": "string",
-          "title": "Title Template",
+          "title": "Title template",
           "description": "add a %s whenever you want it to be replaced with the product name",
           "default": "%s | Fashion Store"
         },
@@ -7471,7 +7509,7 @@
             "string",
             "null"
           ],
-          "title": "Description",
+          "title": "Meta tag description",
           "description": "If not set, the product description will be used instead"
         },
         "themeColor": {
@@ -7723,7 +7761,11 @@
         },
         "name": {
           "type": "string",
-          "title": "Name"
+          "title": "The audience name (will be used on cookies).",
+          "description": "Add a meaningful short word for the audience name.",
+          "maxLength": 22,
+          "minLength": 3,
+          "pattern": "^[A-Za-z0-9_]+$"
         },
         "routes": {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Route[]",
@@ -7839,7 +7881,7 @@
       ],
       "title": "WorkflowRef"
     },
-    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|a644f04e64ddc307d5353346f01dc4c2": {
+    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@6fafe0f553db3c0685828404a37be338|WorkflowRef": {
       "anyOf": [
         {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef"
@@ -7857,13 +7899,13 @@
           ]
         }
       ],
-      "title": "WorkflowRef|a644f04e64ddc307d5353346f01dc4c2"
+      "title": "6fafe0f553db3c0685828404a37be338|WorkflowRef"
     },
     "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@Props": {
       "type": "object",
       "properties": {
         "workflow": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|a644f04e64ddc307d5353346f01dc4c2",
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@6fafe0f553db3c0685828404a37be338|WorkflowRef",
           "title": "Workflow"
         },
         "id": {
@@ -9511,12 +9553,21 @@
         }
       }
     },
+
     "ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvQ2FyZC50c3g=": {
       "title": "deco-sites/airbnb/sections/Card.tsx",
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvQ2FyZC50c3g=@Props"
+=======
+    "ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvQm90dG9tQmFyLnRzeA==": {
+      "title": "deco-sites/airbnb/sections/BottomBar.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvQm90dG9tQmFyLnRzeA==@Props"
+
         }
       ],
       "required": [
@@ -9526,6 +9577,7 @@
         "__resolveType": {
           "type": "string",
           "enum": [
+
             "deco-sites/airbnb/sections/Card.tsx"
           ],
           "default": "deco-sites/airbnb/sections/Card.tsx"
@@ -9545,6 +9597,11 @@
             "deco-sites/airbnb/sections/CardGrid.tsx"
           ],
           "default": "deco-sites/airbnb/sections/CardGrid.tsx"
+=======
+            "deco-sites/airbnb/sections/BottomBar.tsx"
+          ],
+          "default": "deco-sites/airbnb/sections/BottomBar.tsx"
+
         }
       }
     },
@@ -9608,6 +9665,22 @@
             "deco-sites/airbnb/sections/Head.tsx"
           ],
           "default": "deco-sites/airbnb/sections/Head.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvTmF2QmFyLnRzeA==": {
+      "title": "deco-sites/airbnb/sections/NavBar.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/airbnb/sections/NavBar.tsx"
+          ],
+          "default": "deco-sites/airbnb/sections/NavBar.tsx"
         }
       }
     },
@@ -10470,21 +10543,6 @@
       ],
       "title": "deco-cx/live/routes/_middleware.ts@MiddlewareConfig",
       "description": "Global configurations for ./routes/_middleware.ts route"
-    },
-    "ZGVjby1jeC9saXZlL3JvdXRlcy9bLi4uY2F0Y2hhbGxdLnRzeA==@Entrypoint": {
-      "type": "object",
-      "properties": {
-        "handler": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler",
-          "description": "configure how to handle requests.",
-          "title": "Handler"
-        }
-      },
-      "required": [
-        "handler"
-      ],
-      "title": "deco-cx/live/routes/[...catchall].tsx@Entrypoint",
-      "description": "Site entrypoint, configure your audiences and routes."
     }
   },
   "root": {
@@ -10653,6 +10711,14 @@
         }
       ]
     },
+    "routes": {
+      "title": "routes",
+      "anyOf": []
+    },
+    "islands": {
+      "title": "islands",
+      "anyOf": []
+    },
     "handlers": {
       "title": "handlers",
       "anyOf": [
@@ -10709,10 +10775,14 @@
           "$ref": "#/definitions/JGxpdmUvc2VjdGlvbnMvVXNlU2xvdC50c3g="
         },
         {
+
           "$ref": "#/definitions/ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvQ2FyZC50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvQ2FyZEdyaWQudHN4"
+=======
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvQm90dG9tQmFyLnRzeA=="
+
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA=="
@@ -10722,6 +10792,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvSGVhZC50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9haXJibmIvc2VjdGlvbnMvTmF2QmFyLnRzeA=="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvQW5hbHl0aWNzLnRzeA=="
@@ -10869,6 +10942,10 @@
         }
       ]
     },
+    "workflows": {
+      "title": "workflows",
+      "anyOf": []
+    },
     "entrypoint": {
       "type": "object",
       "required": [
@@ -10887,14 +10964,14 @@
         "./routes/[...catchall].tsx": {
           "anyOf": [
             {
-              "$ref": "#/definitions/ZGVjby1jeC9saXZlL3JvdXRlcy9bLi4uY2F0Y2hhbGxdLnRzeA==@Entrypoint"
+              "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler"
             }
           ]
         },
         "./routes/index.tsx": {
           "anyOf": [
             {
-              "$ref": "#/definitions/ZGVjby1jeC9saXZlL3JvdXRlcy9bLi4uY2F0Y2hhbGxdLnRzeA==@Entrypoint"
+              "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler"
             }
           ]
         }
@@ -10918,6 +10995,12 @@
             "$ref": "#/root/loaders"
           },
           {
+            "$ref": "#/root/routes"
+          },
+          {
+            "$ref": "#/root/islands"
+          },
+          {
             "$ref": "#/root/handlers"
           },
           {
@@ -10934,6 +11017,9 @@
           },
           {
             "$ref": "#/root/actions"
+          },
+          {
+            "$ref": "#/root/workflows"
           }
         ]
       }
