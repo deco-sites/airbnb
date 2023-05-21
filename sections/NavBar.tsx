@@ -214,26 +214,55 @@ export default function NavBar() {
           <p className="text-xs text-inherit">Cidades famosas</p>
         </div>
         <div className="carousel-item flex flex-col justify-center items-center">
-        <img class="i1wps9q8 dir dir-ltr" src="https://a0.muscache.com/pictures/89faf9ae-bbbc-4bc4-aecd-cc15bf36cbca.jpg" alt="" width="20px" height="20px"/>
+          <img
+            class="i1wps9q8 dir dir-ltr"
+            src="https://a0.muscache.com/pictures/89faf9ae-bbbc-4bc4-aecd-cc15bf36cbca.jpg"
+            alt=""
+            width="20px"
+            height="20px"
+          />
           <p className="text-xs text-inherit">Casas arredondadas</p>
         </div>
         <div className="carousel-item flex flex-col justify-center items-center">
-        <img class="i1wps9q8 dir dir-ltr" src="https://a0.muscache.com/pictures/677a041d-7264-4c45-bb72-52bff21eb6e8.jpg" alt="" width="20px" height="20px"/>
+          <img
+            class="i1wps9q8 dir dir-ltr"
+            src="https://a0.muscache.com/pictures/677a041d-7264-4c45-bb72-52bff21eb6e8.jpg"
+            alt=""
+            width="20px"
+            height="20px"
+          />
           <p className="text-xs text-inherit">Na beira do lago</p>
         </div>
         <div className="carousel-item flex flex-col justify-center items-center">
-        <img class="i1wps9q8 dir dir-ltr" src="https://a0.muscache.com/pictures/3fb523a0-b622-4368-8142-b5e03df7549b.jpg" alt="" width="20" height="20"/>
+          <img
+            class="i1wps9q8 dir dir-ltr"
+            src="https://a0.muscache.com/pictures/3fb523a0-b622-4368-8142-b5e03df7549b.jpg"
+            alt=""
+            width="20"
+            height="20"
+          />
           <p className="text-xs text-inherit">Piscinas incríveis</p>
         </div>
         <div className="carousel-item flex flex-col justify-center items-center">
-        <img class="i1wps9q8 dir dir-ltr" src="https://a0.muscache.com/pictures/ca25c7f3-0d1f-432b-9efa-b9f5dc6d8770.jpg" alt="" width="20" height="20"/>
+          <img
+            class="i1wps9q8 dir dir-ltr"
+            src="https://a0.muscache.com/pictures/ca25c7f3-0d1f-432b-9efa-b9f5dc6d8770.jpg"
+            alt=""
+            width="20"
+            height="20"
+          />
           <p className="text-xs text-inherit">Acampamentos</p>
         </div>
         <div className="carousel-item flex flex-col justify-center items-center">
-        <img class="i1wps9q8 dir dir-ltr" src="https://a0.muscache.com/pictures/78ba8486-6ba6-4a43-a56d-f556189193da.jpg" alt="" width="20" height="20"/>
+          <img
+            class="i1wps9q8 dir dir-ltr"
+            src="https://a0.muscache.com/pictures/78ba8486-6ba6-4a43-a56d-f556189193da.jpg"
+            alt=""
+            width="20"
+            height="20"
+          />
           <p className="text-xs text-inherit">Mansões</p>
         </div>
-
       </div>
     </div>
   );
